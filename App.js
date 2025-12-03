@@ -37,13 +37,13 @@ const initGame = () => {
         div.addEventListener("click", (event) => {
             if (event.target.textContent === "" && xTurn){
                 event.target.textContent = "X"
-                xTurn = false
+                xTurn = false counter++
+                
             }else if(event.target.textContent === "" && xTurn === false){
                 event.target.textContent ="O"
                 xTurn = true
+                 counter++
             } 
-
-            counter++
             gameLogic()
         })
     }
@@ -88,3 +88,4 @@ const congratulationMessage = (message) => {
 }
 
 initGame()
+
